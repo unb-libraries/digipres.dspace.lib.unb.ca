@@ -1,0 +1,25 @@
+dockworker:
+  version: '5'
+  application:
+    name: digipres.dspace.lib.unb.ca
+    finish_marker: 'Server startup in'
+    project_prefix: SCHOLAR
+    upstream_images:
+      - maven:3-jdk-8-alpine
+      - tomcat:8-jre8
+    uuid: 3507
+  deployment:
+    environments:
+      - prod
+    local:
+      localhost_hostnames:
+        - digipres.dspace.lib.unb.ca
+  github:
+    repo: digipres.dspace.lib.unb.ca
+    owner: unb-libraries
+  image:
+    push_branches:
+      - prod
+    name: ghcr.io/unb-libraries/digipres.dspace.lib.unb.ca
+    date_tag_image: true
+    repository: ghcr
