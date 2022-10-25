@@ -14,6 +14,9 @@ dockworker:
     local:
       localhost_hostnames:
         - digipres.dspace.lib.unb.ca
+    workflow:
+      source: dockworker
+      type: deployment-workflow
   github:
     repo: digipres.dspace.lib.unb.ca
     owner: unb-libraries
